@@ -5,3 +5,7 @@
 
 
 地址：http://ramda.cn/
+
+API: https://ramda.cn/docs/
+
+github上的cookbook: https://github.com/ramda/ramda/wiki/Cookbook

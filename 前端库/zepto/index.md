@@ -27,7 +27,7 @@ zepto移动端源码解析
 
 
 * [core](./core/core.md){:target="_blank"}
-* [core_$.camelCase](./core_camelCase.md){:target="_blank"}
+* [core_$.camelCase](./core/core_camelCase.md){:target="_blank"}
 * [core_$.contains](./core/core_contains.md){:target="_blank"}
 * [core_$.each](./core/core_each.md){:target="_blank"}
 * [core_$.extend](./core/core_extend.md){:target="_blank"}

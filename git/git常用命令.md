@@ -6,7 +6,7 @@
 * [Commit History](#Commit History)
 * [版本分支](#版本分支)
 * [标签](#标签)
-* [Udate & Publish](#Udate & Publish)
+* [Update & Publish](#Update & Publish)
 * [Merge and Rebase](#Merge and Rebase)
 * [UNDO](#UNDO)
 * [others](#others)
@@ -143,7 +143,7 @@ $ git push --tags
 
 
 
-## Udate & Publish
+## Update & Publish
 
 ```
 $ ssh-keygen -t rsa -C "youremail@example.com"    #cat ~/.ssh/id_rsa.pub 上传公钥
