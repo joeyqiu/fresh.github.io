@@ -2,13 +2,22 @@
 <html lang="zh-cmn-Hans">
   <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ES API">
+    <meta name="keywords" content="导航栏Demo">
     <meta name="format-detection" content="telephone=no, email=no, address=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="x-dns-prefetch-control" content="on">
-    <title>ES API</title>
+    <!-- <link rel="dns-prefetch" href="//storage.360buyimg.com">
+    <link rel="dns-prefetch" href="//img30.360buyimg.com">
+    <link rel="dns-prefetch" href="//api.m.jd.com"> -->
+    <title>导航栏Demo</title>
+    <script>
+      /**
+       * 页面尺寸变换的时候重置根节点的fontSize
+       */
+      (function(c,b){var d=b.documentElement;function a(){var e=d.clientWidth/7.5;d.style.fontSize=e+"px"}a();c.addEventListener("resize",a);c.addEventListener("pageshow",function(f){if(f.persisted){a()}})}(window,document));
+    </script>
   </head>
   <body>
-    hello api!!!
-  </body>
+    <div id="root"></div>
+  <script src="app.bundle.js"></script></body>
 </html>
