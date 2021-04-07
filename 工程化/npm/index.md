@@ -44,5 +44,5 @@ https://registry.npmjs.org
 * [node-gyp rebuild错误](./遇到过的问题/node-gyp-rebuild错误.md){:target="_blank"}
 * [ERR_INVALID_ARG_TYP](./遇到过的问题/ERR_INVALID_ARG_TYP.md){:target="_blank"}
 * [开发基于swiper组件的库遇到的问题](./遇到过的问题/开发基于swiper组件的库遇到的问题.md){:target="_blank"}
-* [[Failed at the xxx install script](./遇到过的问题/Failed_at_the_xxx_install_script.md){:target="_blank"}]()
+* [Failed at the xxx install script](./遇到过的问题/Failed_at_the_xxx_install_script.md){:target="_blank"}
 
