@@ -3,6 +3,7 @@
 ### Other
 
 * [常见ajax_code](./ajax_code.md){:target="_blank"}
+* [常见vscode配置问题](./常见vscode配置问题.md){:target="_blank"}
 
 
 
