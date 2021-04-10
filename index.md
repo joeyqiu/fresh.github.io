@@ -4,7 +4,7 @@ markdown的语法可以参考：[http://markdown.p2hp.com/index.html](http://mar
 
 ### 记录
 
-* [HTML](./html/html.md){:target="_blank"}
+* [HTML](./html/index.html){:target="_blank"}
 * [CSS](./css/css.md){:target="_blank"}
 * [JavaScript](./javascript/javascript.md){:target="_blank"}
 * [工程化](./工程化/index.md){:target="_blank"}
@@ -15,6 +15,28 @@ markdown的语法可以参考：[http://markdown.p2hp.com/index.html](http://mar
 * [Other](./other/other.md){:target="_blank"}
 * [google](./google/google.md){:target="_blank"}
 * [ES](./es/index.html){:target="_blank"}
+
+
+
+### docsify步骤
+
+初始化目录
+
+```
+docsify init ./docs
+```
+
+使用sidebar，并且自定义名字
+
+```
+<script>
+  window.$docsify = {
+    loadSidebar: 'sidebar.md'
+  }
+</script>
+```
+
+
 
 
 
