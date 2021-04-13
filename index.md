@@ -2,8 +2,6 @@ markdown的语法可以参考：[http://markdown.p2hp.com/index.html](http://mar
 
 
 
-### 记录
-
 * [HTML](./html/index.html){:target="_blank"}
 * [CSS](./css/css.md){:target="_blank"}
 * [JavaScript](./javascript/javascript.md){:target="_blank"}
@@ -34,6 +32,12 @@ docsify init ./docs
     loadSidebar: 'sidebar.md'
   }
 </script>
+```
+
+预览页面
+
+```
+docsify serve docs
 ```
 
 
