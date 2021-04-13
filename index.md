@@ -3,7 +3,7 @@ markdown的语法可以参考：[http://markdown.p2hp.com/index.html](http://mar
 
 
 * [HTML](./html/index.html){:target="_blank"}
-* [CSS](./css/css.md){:target="_blank"}
+* [CSS](./css/index.html){:target="_blank"}
 * [JavaScript](./javascript/javascript.md){:target="_blank"}
 * [工程化](./工程化/index.md){:target="_blank"}
 * [前端库](./前端库/index.md){:target="_blank"}
