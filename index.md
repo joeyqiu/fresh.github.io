@@ -2,17 +2,17 @@ markdown的语法可以参考：[http://markdown.p2hp.com/index.html](http://mar
 
 
 
-* [HTML](./html/index.html){:target="_blank"}
-* [CSS](./css/index.html){:target="_blank"}
-* [JavaScript](./javascript/javascript.md){:target="_blank"}
-* [工程化](./工程化/index.md){:target="_blank"}
-* [前端库](./前端库/index.md){:target="_blank"}
-* [Git](./git/git.md){:target="_blank"}
-* [Server](./server/server.md){:target="_blank"}
-* [H5games](./games/games.md){:target="_blank"}
-* [Other](./other/other.md){:target="_blank"}
-* [google](./google/google.md){:target="_blank"}
-* [ES](./es/index.html){:target="_blank"}
+* [HTML](./html/index.html)
+* [CSS](./css/index.html)
+* [JavaScript](./javascript/javascript.md)
+* [工程化](./工程化/index.md)
+* [前端库](./前端库/index.md)
+* [Git](./git/git.md)
+* [Server](./server/server.md)
+* [H5games](./games/games.md)
+* [Other](./other/other.md)
+* [google](./google/google.md)
+* [ES](./es/index.html)
 
 
 
@@ -75,6 +75,10 @@ docsify serve docs
 | weUI             | [https://weui.io/](https://weui.io/){:target="_blank"}       |
 |                  |                                                              |
 | Blog模版         |                                                              |
-| docsify          | https://docsify.js.org/#/                                    |
+| docsify          | [https://docsify.js.org/#/](https://docsify.js.org/#/){:target="_blank"} |
+|                  |                                                              |
+| 工具库           |                                                              |
+| lodash           | [https://lodash.com/](https://lodash.com/){:target="_blank"} 中文网：[https://www.lodashjs.com/](https://www.lodashjs.com/){:target="_blank"} |
+|                  |                                                              |
 |                  |                                                              |
 
