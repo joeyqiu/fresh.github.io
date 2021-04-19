@@ -3,6 +3,7 @@
 * [vscode配置中文](#vscode配置中文)
 * [写js代码报ts的错误信息](#写js代码报ts的错误信息)
 * [vscode折叠设置](#vscode折叠设置)
+* [Typescript扩展中可以关闭vscode的自动提示功能](#Typescript扩展中可以关闭vscode的自动提示功能)
 
 
 
@@ -28,3 +29,14 @@
 vscode中折叠了代码后，有时候展开的icon就不展示了，就导致无法查看折叠起来的代码，就比较的尴尬。
 
 Code =》 首选项 =〉设置，输入`foldingStrategy`，然后不要用auto，选择`indentation`即可。
+
+
+
+### Typescript扩展中可以关闭vscode的自动提示功能
+
+Code => 首选项 => 用户 => 扩展 => Typescript,
+
+JavaScript > Suggest: Enabled。
+
+某天不小心关闭这个选择框之后，vscode代码的自动提示功能就不生效了。
+

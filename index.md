@@ -80,5 +80,10 @@ docsify serve docs
 | 工具库           |                                                              |
 | lodash           | [https://lodash.com/](https://lodash.com/){:target="_blank"} 中文网：[https://www.lodashjs.com/](https://www.lodashjs.com/){:target="_blank"} |
 |                  |                                                              |
+| CSS库            |                                                              |
+| Animate.css      | [https://animate.style/](https://animate.style/)             |
+|                  |                                                              |
+| 在线工具         |                                                              |
+| CSS Stats        | [https://cssstats.com/](https://cssstats.com/) ，解析页面中的CSS代码 |
 |                  |                                                              |
 
