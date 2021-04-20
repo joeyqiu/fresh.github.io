@@ -1,3 +1,5 @@
+
+
 ## AntDesign - style
 
 antd中，每个组件的style里面都有个`index.tsx`文件，通过js的方式来引入样式代码。
@@ -36,6 +38,72 @@ import '../../tooltip/style';
 ### style
 
 ```
+|--color -- *
+|--core -- *
+|--mixins -- *
+|--themes -- *
+|--compact.less
+|--dark.less
+|--index.less
+|--index.tsx
+```
+
+index.tsx文件中引入了index.less.
 
 ```
+# index.tsx
+import './index.less';
+
+# index.less
+@import './themes/index';
+@import './core/index';
+
+# themes/index.less
+@import './default.less';
+```
+
+themes目录中除了index.less外，另外三个文件都分别表示一种主题，default是默认的，dark.less和compact.less分别是antd支持的另外两个主题：暗黑模式、紧凑模式。
+
+主题文件中，会定义很多通用的变量。
+
+
+
+### default
+
+具体还是要看代码，这边只展示部分
+
+```
+# color中会基于给定的基准颜色值，提供10种渐变的颜色。
+@import '../color/colors';
+```
+
+Colors，主颜色的渐变，基本脚手架的变量。
+
+```
+@primary-color: @blue-6;
+@info-color: @primary-color;
+@success-color: @green-6;
+@processing-color: @blue-6;
+@error-color: @red-5;
+@highlight-color: @red-5;
+@warning-color: @gold-6;
+@normal-color: #d9d9d9;
+@white: #fff;
+@black: #000;
+```
+
+基本变量：
+
+```
+@body-background: #fff;
+@font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+  'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+  'Noto Color Emoji';
+@font-variant-base: tabular-nums;
+@font-feature-settings-base: 'tnum';
+```
+
+tabular-nums在font-variant-numeric中使用，用于控制数字、分数和序号标记的替代字形的使用。tabular-nums表示启用数字显示。使数字等宽，易于像表格那样对齐。等同于OpenType特性`tnum`。
+
+tnum在`font-feature-settings`中使用，用于控制OpenType字体中的高级印刷功能。
 
