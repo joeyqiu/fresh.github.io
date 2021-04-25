@@ -107,3 +107,33 @@ tabular-nums在font-variant-numeric中使用，用于控制数字、分数和序
 
 tnum在`font-feature-settings`中使用，用于控制OpenType字体中的高级印刷功能。
 
+
+
+用到的less函数
+
+```
+fade
+tint
+ceil
+max
+round
+darken
+shade
+mix
+
+~`colorPalette('@{success-color}', 3) `
+
+@input-padding-vertical-base: max(
+  round((@input-height-base - @font-size-base * @line-height-base) / 2 * 10) / 10 -
+    @border-width-base,
+  3px
+);
+@input-padding-vertical-sm: max(
+  round((@input-height-sm - @font-size-base * @line-height-base) / 2 * 10) / 10 - @border-width-base,
+  0
+);
+@input-padding-vertical-lg: ceil((@input-height-lg - @font-size-lg * @line-height-base) / 2 * 10) /
+  10 - @border-width-base;
+
+```
+
