@@ -16,12 +16,13 @@
   * [ios8下overflow滚动无效](css/questions/ios8下overflow滚动无效.md)
   * [语音播放效果](css/questions/语音播放效果.md)
   * [p标签固定宽带内容不换行](css/questions/p标签固定宽带内容不换行.md)
-  * [!important in keyframe](css/questions/!important in keyframe.md)
+  * [!important in keyframe](css/questions/!important_in_keyframe.md)
   * [span元素底部对齐](css/questions/span元素底部对齐.md)
   * [translate卡顿](css/questions/translate卡顿.md)
 * Less
   * [less_@import](less/less_@import.md)
-
+  * [this.getOptions is not a function](less/this.getOptions的错误提示.md)
+  
 * CSS module
   * [css_module](css_module/css_module.md)
   * [简单使用](css_module/简单使用.md)
