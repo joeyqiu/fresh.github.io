@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class Promise1 {
+      _tatus = 'Pending'  // Fulfilled Rejected
+
+      onResolve = []
+
+      onReject = []
+
+      constructor(fn) {
+        this.onFulfilled = this.onFulfilled.bind(this)
+        this.onRejected = this.onRejected.bind(this)
+        fn(this.onFulfilled, this.onRejected)
+      }
+
+      then(res, rej) {
+        res = res || (val => val)
+        rej = rej || (er => er)
+
+        return new Promise1((res1, rej1) => {
+
+          if (this._tatus === 'Pending') {
+
+            this.onResolve.push(() => {
+              let val2 = res(this._val)
+              res1(val2)
+            })
+
+          }
+
+          if (this._tatus === 'Fulfilled') {
+            let val2 = res(this._val)
+            res1(val2)
+          }
+
+
+        })
+      }
+
+      onFulfilled(val) {
+        this._val = val
+        setTimeout(() => {
+          if (this._tatus === 'Pending') {
+            this._tatus ='Fulfilled'
+            this.onResolve.forEach(item => {
+              item(this._val)
+            })
+          }
+        })
+        
+      }
+
+      onRejected(val) {
+        if (this._tatus === 'Pending') {
+          this._tatus ='Rejected'
+          this.onReject(val)
+        }
+      }
+
+    }
+
+    const ps = new Promise1((res, rej) => {
+      setTimeout(() => res('res'), 2000)
+    })
+
+    ps
+      .then(res => {
+      console.log(res)
+    })
+
+    setTimeout(() => {
+      console.log('执行了')
+      ps.then((val) => {
+        console.log(111, val)
+      })
+    }, 4000)
+
+    // ps.then((res) => {
+    //   console.log(11111, res)
+    // })
+
+    // const ps1 = new Promise((res, rej) => {
+    //   setTimeout(() => res('res'), 2000)
+      
+    // })
+
+    // ps1
+    //   .then(res => {
+    //   console.log(res)
+    // }).then(res => {
+    //   console.log(res)
+    // })
+
+    // ps1.then((res) => {
+    //   console.log(11111, res)
+    // })
+
+    // const ps2 = new Promise1((res, rej) => {
+    //   setTimeout(() => res('res'), 2000)
+      
+    // })
+
+    // ps2
+    //   .then(res => {
+    //   console.log(res)
+    //   return new Promise1((res1) => {
+    //     setTimeout(() => {
+    //       console.log('ps2执行了')
+    //       res1('aaaaa')
+    //     }, 3000)
+    //   })
+    // }).then(res => {
+    //   console.log(res)
+    // })
+
+    // ps2.then((res) => {
+    //   console.log(11111, res)
+    // })
+
+  </script>
+</body>
+</html>

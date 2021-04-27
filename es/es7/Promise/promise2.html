@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class StonePromise {
+      static status = 'pending'; // pending, fulfilled, rejected
+
+      constructor(executor) {
+        console.log(executor)
+      }
+
+      then(resovle, reject) {
+
+      }
+
+    }
+
+    let p1 = new Promise(function(resolve, reject) {
+    resolve(42);
+});
+
+let p2 = new Promise(function(resolve, reject) {
+    resolve(43);
+});
+
+let p3 = new Promise(function(resolve, reject) {
+    resolve(44);
+});
+
+let p4 = Promise.all([p1, p2, p3]);
+
+p4.then(function(value) {
+    console.log(Array.isArray(value));  // true
+    console.log(value)
+    console.log(value[0]);              // 42
+    console.log(value[1]);              // 43
+    console.log(value[2]);              // 44
+});
+
+  </script>
+</body>
+</html>
