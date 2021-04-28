@@ -13,6 +13,7 @@ markdown的语法可以参考：[http://markdown.p2hp.com/index.html](http://mar
 * [Other](./other/other.md)
 * [google](./google/google.md)
 * [ES](./es/index.html)
+* [收集的组件](./components.md)
 
 
 

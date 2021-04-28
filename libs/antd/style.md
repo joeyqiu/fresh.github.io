@@ -109,6 +109,42 @@ tnum在`font-feature-settings`中使用，用于控制OpenType字体中的高级
 
 
 
+### core & mixins
+
+core，core里面还有个motion目录，包含一些预定的animation。
+
+```
+@import '../mixins/index';
+@import 'base';
+@import 'global';
+@import 'iconfont';
+@import 'motion';
+```
+
+global.less是在normalize.css的基础上做一些通用设置。
+
+mixins 里面定义了一些帮助函数。
+
+```
+// Mixins
+// --------------------------------------------------
+@import 'size';
+@import 'compatibility';
+@import 'clearfix';
+@import 'iconfont';
+@import 'motion';
+@import 'reset';
+@import 'operation-unit';
+@import 'typography';
+@import 'customize';
+@import 'box';
+@import 'modal-mask';
+```
+
+
+
+### 函数
+
 用到的less函数
 
 ```

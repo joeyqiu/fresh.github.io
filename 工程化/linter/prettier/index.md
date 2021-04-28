@@ -93,7 +93,7 @@ npm install --save-dev eslint-config-prettier
 
 ### Git 钩子
 
-一般项目中都是在钩子中使用prettier，在commit之前
+一般项目中都是在钩子中使用prettier，在commit之前， husky的使用比较麻烦，到时候需要看下官方文档，要注意不同版本的差别。
 
 ```
 {
@@ -124,3 +124,6 @@ Prettier使用[cosmiconfig](https://github.com/davidtheclark/cosmiconfig){:targe
 
 
 
+### .prettierignore
+
+推荐在项目中放置一个`.prettierignore` 文件。确保不会改动到那些你不想要修改的文件。
