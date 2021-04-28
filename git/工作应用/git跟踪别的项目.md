@@ -26,6 +26,21 @@ git checkout -b latest official/master，基于官方的远程master分支，创
 
 latest分支是跟踪github上ant最新代码的分支。
 
+
+
+如果遇到如下的错误信息：
+
+```
+远程remote为github。
+
+git checkout -b github github/master
+fatal: 'github/master' is not a commit and a branch 'github' cannot be created from it
+```
+
+就是因为版本的代码需要更新下，可以`git pull` , 或者`git fetch github` 来更新分支先。
+
+
+
 如果需要merge新功能的时候，可以基于latest再切换一个新分支，然后会推到想要merge的版本，然后再merge到自己的分支上去。
 
 latest分支只做跟踪。

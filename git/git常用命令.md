@@ -135,7 +135,11 @@ $ git tag <tagName> <version>           # 为历史版本提交创建标签
  
 $ git checkout <tagName>                # 签出标签（快速查看基于某个标签下的断面，但不能提交）
  
-$ git tag -d <tagName>  
+$ git tag -d <tagName>   # 删除标签
+
+切换个分支来合并tag代码。
+$ git checkout destination_branch
+$ git merge tag_name
 
 # publish your tags
 $ git push --tags
@@ -156,14 +160,9 @@ $ git remote show <remote>
 
 #添加远程版本库origin
 $ git remote add <origin> <URL> 
-#删除远程版本库origin
-$ git remote rm <origin> 
-$ git push -u origin master :关联后，第一次推送master分支的所有内容
-# delete a branch on the remote
-$ git branch -dr <remote/branch>
 
- #获取所有远程的修改但不合并
-$ git fetch <origin>           
+#更新指定远程版本库origin但不合并, (在多个远程仓库的情况下，比较有用)
+$ git fetch <origin>
 
 #获取并合并到本地分支
 $ git pull = git pull <origin> 
