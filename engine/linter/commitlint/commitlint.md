@@ -21,9 +21,15 @@ echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitl
 "commitmsg": "commitlint --edit",
 ```
 
-这边没用到husky，而是用的自带的钩子。
+这边用到了husky。
 
 需要注意是的提交的顺序，需要配置在`commitmsg` 中，如果在`precommit` 中进行commitlint的处理，会一直接受到之前的旧commit消息，导致失败。
+
+
+
+git会自带多个钩子，但是具体钩子的实现，需要自己来写，所以可以使用大佬们编写好的钩子方法，来做校验。
+
+自带钩子在`.git/hooks`  下面，以`.sample` 结尾，如果需要生效，把`.sample` 去掉就行。但是具体里面执行了么也不是很懂，就用别人提供的工具吧。
 
 
 
