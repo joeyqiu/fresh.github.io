@@ -3,11 +3,11 @@
 * [Create](#Create)
 * [配置git](#配置git)
 * [文件版本操作](#文件版本操作)
-* [Commit History](#Commit History)
+* [Commit History](#Commit_History)
 * [版本分支](#版本分支)
 * [标签](#标签)
-* [Update & Publish](#Update & Publish)
-* [Merge and Rebase](#Merge and Rebase)
+* [Update & Publish](#Update&Publish)
+* [Merge and Rebase](#Merge&Rebase)
 * [UNDO](#UNDO)
 * [others](#others)
 
@@ -82,7 +82,7 @@ $ git revert --no-commit head <filename>      # 撤销最近一次的提交
 
 
 
-## Commit History
+## Commit_History
 
 ```
 # show all commits, starting with newest
@@ -147,7 +147,7 @@ $ git push --tags
 
 
 
-## Update & Publish
+## Update&Publish
 
 ```
 $ ssh-keygen -t rsa -C "youremail@example.com"    #cat ~/.ssh/id_rsa.pub 上传公钥
@@ -177,7 +177,7 @@ git remote set-url origin  git@git.palmchat.corp:server/help-web.git
 
 
 
-### Merge and Rebase
+### Merge&Rebase
 
 ```
 # merge <branch> into your current HEAD
