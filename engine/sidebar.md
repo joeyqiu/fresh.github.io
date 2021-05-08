@@ -13,13 +13,14 @@
   * eslint
     * [eslint-loader](linter/eslint/eslint-loader.md)
     * [eslintrc](linter/eslint/eslintrc.md)
+    * [eslint官方规则翻译](linter/eslint/eslint_recommended_rules.md)
   * stylelint
     * [stylelint-webpack-plugin](linter/stylelint/stylelint-webpack-plugin.md)
   * commitlint
     * [commitlint使用](linter/commitlint/commitlint.md)
-
   
-
   
-
+  
+  
+  
   

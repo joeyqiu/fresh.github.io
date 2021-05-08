@@ -10,9 +10,11 @@ https://eslint.org/docs/rules/
 
 可能的语法和逻辑错误
 
-| 规则名称                        | 规则说明                                                     |
-| ------------------------------- | ------------------------------------------------------------ |
-| [for-direction](#for-direction) | enforce "for" loop update clause moving the counter in the right direction. |
+| 规则名称                                                | 规则说明                                                     |
+| ------------------------------------------------------- | ------------------------------------------------------------ |
+| [for-direction](#for-direction)                         | enforce "for" loop update clause moving the counter in the right direction. |
+| [getter-return](#getter-return)                         | enforce 'return' statements in getters                       |
+| [no-async-promise-executor](#no-async-promise-executor) | disallow using an async function as a Promise executor       |
 
 
 
@@ -37,4 +39,154 @@ for (var i = 10; i >= 0; i++) {}
 for (var i = 0; i < 10; i++) {}
 // 可以执行结束
 ```
+
+
+
+#### getter-return
+
+The get syntax binds an object property to a function that will be called when that property is looked up. It was first introduced in ECMAScript 5:
+
+当访问一个对象的属性时，属性绑定的get函数就会被调用。每个get函数都最好有个返回值。
+
+```
+var p = {
+        get name(){
+            return "nicholas";
+        }
+    };
+
+    Object.defineProperty(p, "age", {
+        get: function (){
+            return 17;
+        }
+    });
+```
+
+##### 错误的demo
+
+````
+p = {
+    get name(){
+        // no returns.
+    }
+};
+
+Object.defineProperty(p, "age", {
+    get: function (){
+        // no returns.
+    }
+});
+
+class P{
+    get name(){
+        // no returns.
+    }
+}
+````
+
+##### 正确的demo
+
+````
+p = {
+    get name(){
+        return "nicholas";
+    }
+};
+
+Object.defineProperty(p, "age", {
+    get: function (){
+        return 18;
+    }
+});
+
+class P{
+    get name(){
+        return "nicholas";
+    }
+}
+````
+
+##### Options
+
+* "allowImplicit": false, 允许return返回一个undefined值。就直接return
+
+```
+/*eslint getter-return: ["error", { allowImplicit: true }]*/
+p = {
+    get name(){
+        return; // return undefined implicitly.
+    }
+};
+```
+
+
+
+#### no-async-promise-executor
+
+不允许使用async函数作为一个Promise的执行函数。
+
+Promise接收一个执行函数作为参数，这个函数有resolve和reject两个参数用来控制promise的状态。
+
+```
+const result = new Promise(function executor(resolve, reject) {
+  readFile('foo.txt', function(err, result) {
+    if (err) {
+      reject(err);
+    } else {
+      resolve(result);
+    }
+  });
+});
+```
+
+当执行函数是一个async函数时，是一种错误的使用方式，下述理由会解释：
+
+* 如果一个async执行函数抛出一个错误，这个错误会丢失，并且并不会新创建的Promise构造函数所捕获来reject。这是难以调试且会造成错误的。
+* 如果一个promise执行函数使用了await，就意味着没有必要使用Promise了。
+
+##### 错误demo
+
+```
+const foo = new Promise(async (resolve, reject) => {
+  readFile('foo.txt', function(err, result) {
+    if (err) {
+      reject(err);
+    } else {
+      resolve(result);
+    }
+  });
+});
+
+const result = new Promise(async (resolve, reject) => {
+  resolve(await foo);
+});
+```
+
+##### 正确demo
+
+````
+const foo = new Promise((resolve, reject) => {
+  readFile('foo.txt', function(err, result) {
+    if (err) {
+      reject(err);
+    } else {
+      resolve(result);
+    }
+  });
+});
+
+const result = Promise.resolve(foo);
+````
+
+
+
+
+
+
+
+
+
+
+
+
 
