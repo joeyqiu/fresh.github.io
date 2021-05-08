@@ -15,6 +15,7 @@ https://eslint.org/docs/rules/
 | [for-direction](#for-direction)                         | enforce "for" loop update clause moving the counter in the right direction. |
 | [getter-return](#getter-return)                         | enforce 'return' statements in getters                       |
 | [no-async-promise-executor](#no-async-promise-executor) | disallow using an async function as a Promise executor       |
+| [no-await-in-loop](#no-await-in-loop)                   | disallow 'await' inside of loops                             |
 
 
 
@@ -180,7 +181,50 @@ const result = Promise.resolve(foo);
 
 
 
+#### no-await-in-loop
 
+遍历执行是一个常见的操作。但是，在遍历中执行每次都执行`await`操作，意味着并没有充分利用好`async/await` 的并行优势。
+
+通常这样的代码就需要被重构成使用promise了，并且通过`Promise.all()`函数来获取结果。否则的话，每次执行await，都会阻塞到等单次遍历执行完成之后再执行下一次。
+
+##### 错误demo
+
+```
+async function foo(things) {
+  const results = [];
+  for (const thing of things) {
+    // Bad: each loop iteration is delayed until the entire asynchronous operation completes
+    results.push(await bar(thing));
+  }
+  return baz(results);
+}
+```
+
+需要被重构为
+
+##### 正确demo
+
+```
+async function foo(things) {
+  const results = [];
+  for (const thing of things) {
+    // Good: all asynchronous operations are immediately started.
+    results.push(bar(thing));
+  }
+  // Now that all the asynchronous operations are running, here we wait until they all complete.
+  return baz(await Promise.all(results));
+}
+```
+
+##### When Not To Use It
+
+有些情况下，是不建议使用该规则的，就会建议在遍历中使用await。所以需要具体代码具体分析，并不是固定死的。
+
+比如一些遍历循环，但是每次遍历并不是完全独立的，
+
+* 可能一次遍历的输出会需要作为下一次遍历的输入，
+* 或者在失败的时候，需要进行重复执行
+*  loops may be used to prevent your code from sending an excessive amount of requests in parallel.
 
 
 
