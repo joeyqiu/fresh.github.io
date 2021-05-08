@@ -43,6 +43,10 @@ for (var i = 0; i < 10; i++) {}
 
 
 
+---
+
+
+
 #### getter-return
 
 The get syntax binds an object property to a function that will be called when that property is looked up. It was first introduced in ECMAScript 5:
@@ -122,6 +126,10 @@ p = {
 
 
 
+---
+
+
+
 #### no-async-promise-executor
 
 不允许使用async函数作为一个Promise的执行函数。
@@ -181,6 +189,10 @@ const result = Promise.resolve(foo);
 
 
 
+---
+
+
+
 #### no-await-in-loop
 
 遍历执行是一个常见的操作。但是，在遍历中执行每次都执行`await`操作，意味着并没有充分利用好`async/await` 的并行优势。
@@ -227,6 +239,8 @@ async function foo(things) {
 *  loops may be used to prevent your code from sending an excessive amount of requests in parallel.
 
 
+
+---
 
 
 
