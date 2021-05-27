@@ -8,10 +8,7 @@ markdown的语法可以参考：[http://markdown.p2hp.com/index.html](http://mar
 * [工程化](engine/index.html)
 * [前端库](./前端库/index.md)
 * [Git](git/index.html)
-* [Server](./server/server.md)
-* [H5games](./games/games.md)
 * [Other](./other/other.md)
-* [google](./google/google.md)
 * [ES](./es/index.html)
 * [收集的组件](./components.md)
 
