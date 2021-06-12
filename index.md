@@ -2,18 +2,6 @@ markdown的语法可以参考：[http://markdown.p2hp.com/index.html](http://mar
 
 
 
-* [HTML](html/index.html)
-* [CSS](css/index.html)
-* [JavaScript](javascript/javascript.md)
-* [工程化](engine/index.html)
-* [前端库](./前端库/index.md)
-* [Git](git/index.html)
-* [Other](./other/other.md)
-* [ES](./es/index.html)
-* [收集的组件](./components.md)
-
-
-
 ### docsify步骤
 
 初始化目录

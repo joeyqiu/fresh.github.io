@@ -14,8 +14,8 @@
 
 参考链接：
 
-* [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name){:target="_blank"}
-* [https://wiki.whatwg.org/wiki/MetaExtensions](https://wiki.whatwg.org/wiki/MetaExtensions){:target="_blank"}
+* [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name)
+* [https://wiki.whatwg.org/wiki/MetaExtensions](https://wiki.whatwg.org/wiki/MetaExtensions)
 
 
 
