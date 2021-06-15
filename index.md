@@ -65,6 +65,7 @@ docsify serve docs
 |                  |                                                              |
 | 工具库           |                                                              |
 | lodash           | [https://lodash.com/](https://lodash.com/){:target="_blank"} 中文网：[https://www.lodashjs.com/](https://www.lodashjs.com/){:target="_blank"} |
+| Ramda            | [http://ramda.cn/](http://ramda.cn/), github上的cookbook: https://github.com/ramda/ramda/wiki/Cookbook |
 |                  |                                                              |
 | CSS库            |                                                              |
 | Animate.css      | [https://animate.style/](https://animate.style/)             |
