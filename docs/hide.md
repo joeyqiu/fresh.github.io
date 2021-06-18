@@ -1,8 +1,6 @@
 一些API手册、知识点、文档翻译的集合
 
-* [HTML](html/index.html)
-* [CSS](css/index.html)
-* [JavaScript](javascript/javascript.md)
+* [遇到的基础问题和知识点](question/question.md)
 * [工程化](engine/index.html)
 * [Git](git/index.html)
 * [Other](./other/other.md)
