@@ -44,7 +44,7 @@ class中的方法，除了静态方法，都是原型链上的，其中的name�
 
 因为方法是原型上的，所以函数中的this指向的上下文就是实例对象。
 
-```
+```javascript
 const joey = new Person('joey')
 joey.getName();
 
@@ -55,7 +55,7 @@ joey.getName();
 
 ##### 在react中
 
-```
+```javascript
 class ButtonDemo extends PureComponent {
   componentDidMount() {
     console.log(this); 实例
