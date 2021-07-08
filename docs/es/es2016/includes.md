@@ -56,8 +56,6 @@ console.log(values.includes(-0)); // true
 
 
 
-
-
 常见null，undefined等值的比较
 
 ```javascript
@@ -73,3 +71,16 @@ null == null // true
 null === null // true
 ```
 
+
+
+#### FAQ
+
+##### why `includes` instead of `has` ?
+
+has方法和contains方法一样，[is not web-compatible](http://esdiscuss.org/topic/having-a-non-enumerable-array-prototype-contains-may-not-be-web-compatible)。has方法在概念上用于搜索keys，includes用于搜索值。
+
+- Keys inside a key-value map: `Map.prototype.has(key)`, `WeakMap.prototype.has(key)`, `Reflect.has(target, propertyKey)`
+- Sets, whose elements are conceptually both keys and values: `Set.prototype.has(value)`, `WeakSet.prototype.has(value)`, `Reflect.Loader.prototype.has(name)`
+- Strings, which are conceptually maps from indices to code points: `String.prototype.includes(searchString, position)`
+
+从统一性来说，最佳的就是和String保持一致，而不是Map或Set。
