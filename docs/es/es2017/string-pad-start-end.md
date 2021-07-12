@@ -1,6 +1,6 @@
 #### String.prototype.padStart/String.prototype.padEnd
 
-##### 原因
+### 起因
 
 因为没有一个合适的原生方法来给字符串进行填充，所以string的操作越来越难，相比别的语言就会觉得并不完整。
 
@@ -99,3 +99,17 @@ if (!String.prototype.padEnd) {
 ##### ‘min length’ VS ‘max length’
 
 关于第一个参数，有讨论过决定是填充字符串的最小长度(minimum length) 或者最大长度(maximum length)。当选用最小长度时：`'foo'.padEnd(4, '12')`的结果是`foo12`，当选用最大长度时，该方法的最终结果是`foo1`。考虑到方法主要是为了格式化列中的等宽文本，所以才用了最大长度。而且如果要实现最小长度的功能，可以使用`String.prototype.repeat`方法。
+
+
+
+#### Left padding, with respect to the fill string: consistency with other languages
+
+发现的支持给字符串在左右进行填充的语言只有Ruby和PHP。他们进行填充都是从字符串的开始进行填充。
+
+```javascript
+"abc".padStart(10, "0123456789");  // 0123456abc
+
+// 如果用字符串的末尾进行填充，结果会是：3456789abc
+```
+
+为了和别的语言保持一致，所以这边也采用开始部分进行填充。

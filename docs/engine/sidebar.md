@@ -10,6 +10,7 @@
   * prettier
     * [prettier介绍](linter/prettier/index.md)
     * [使用pretty-quick来快速美化修改的文件](linter/prettier/使用pretty-quick来快速美化修改的文件.md)
+    * [prettier-config-airbnb](linter/prettier/prettier-config-airbnb.md)
   * eslint
     * [eslint-loader](linter/eslint/eslint-loader.md)
     * [eslintrc](linter/eslint/eslintrc.md)
