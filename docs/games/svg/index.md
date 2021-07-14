@@ -1,0 +1,1 @@
+SVG 意为可缩放矢量图形（Scalable Vector Graphics）
