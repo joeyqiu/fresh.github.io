@@ -1,6 +1,6 @@
 一些API手册、知识点、文档翻译的集合
 
-* [遇到的基础问题和知识点](question/index.html)
+* [基础知识点](basic/index.html)
 * [ES](./es/index.html)
 * [Git](git/index.html)
 * [Other](./other/other.md)
