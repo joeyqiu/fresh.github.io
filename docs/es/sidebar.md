@@ -15,5 +15,6 @@
 #### ES2017
 
 * [String Padding](es2017/string-pad-start-end.md)
+* [Object.entries() 和 Object.values()](es2017/entries&values.md)
 * [Object.getOwnPropertyDescriptors](es2017/Object.getOwnPropertyDescriptors.md)
 
