@@ -6,10 +6,16 @@
 * [Commit History](#Commit_History)
 * [版本分支](#版本分支)
 * [标签](#标签)
-* [Update & Publish](#Update&Publish)
+* [Update & Publish远程分支](#Update&Publish)
 * [Merge and Rebase](#Merge&Rebase)
+* [删除远程分支](#remove remote)
 * [UNDO](#UNDO)
+* [stash](#stash)
 * [others](#others)
+
+
+
+网址：https://git-scm.com/doc
 
 
 
@@ -117,12 +123,10 @@ $ git branch -M <branchName> <newName>  # 会覆盖已存在的同名分支
 $ git branch -d <newName>                 # 如果分支未合并会删除失败
 $ git branch -D <newName>                 # 强制删除分支
  
-$ git branch -r -d origin/<branchName>       #删除远程分支1
-$ git push origin :<branchName>              #删除远程分支2
- 
-$ git remote prune origin           # 删除远程库不存在的分支
 $ git merge –no–ff <branchName>       # 快速合并分支
 ```
+
+
 
 ## 标签
 
@@ -177,6 +181,25 @@ git remote set-url origin  git@git.palmchat.corp:server/help-web.git
 
 
 
+### remove remote
+
+```
+$ git push origin :<branchName>              #删除远程分支2
+ 
+$ git remote prune origin           # 删除远程库不存在的分支
+
+$ git branch -r -d origin/<branchName>       #删除远程分支1跟踪，并不能删除远程仓库上的分支
+
+git branch -r -d origin/feature/daily-2021v5-4
+// Deleted remote-tracking branch origin/feature/daily-2021v5-4 (was 87efe23a).
+
+这个是删除远程的跟踪？并不是删除远程分支
+```
+
+
+
+
+
 ### Merge&Rebase
 
 ```
@@ -226,6 +249,30 @@ $ git reset --keep <commit>
 #查看命令历史，以便确定要回到未来的哪个版本
 $ git reflog	   
 如果是比较严重的操作错误，需要恢复到某个版本，使用`git reflog`查看历史版本，然后根据版本号和reset来回退到之前的版本
+```
+
+
+
+### stash
+
+执行 `git stash` 命令而不带任何参数，就相当于执行 `git stash push` 命令。
+
+```
+$ git stahs [push]: Save your local modifications to a new stash entry and roll them back to HEAD (in the working tree and in the index). The <message> part is optional and gives the description along with the stashed state.
+
+$ git stash list  ：查看stash了哪些存储
+$ git stash show ：显示做了哪些改动，默认show第一个存储,如果要显示其他存贮，后面加stash@{$num}，比如第二个 git stash show stash@{1}
+
+$ git stash apply :应用某个存储,但不会把存储从存储列表中删除，默认使用第一个存储,即stash@{0}，如果要使用其他个，git stash apply stash@{$num} ， 比如第二个：git stash apply stash@{1} 
+
+$ git stash pop ：命令恢复之前缓存的工作目录，将缓存堆栈中的对应stash删除，并将对应修改应用到当前的工作目录下,默认为第一个stash,即stash@{0}，如果要应用并删除其他stash，命令：git stash pop stash@{$num} ，比如应用并删除第二个：git stash pop stash@{1}
+
+$ git stash show -p : 显示第一个存储的改动，如果想显示其他存存储，命令：git stash show  stash@{$num}  -p ，比如第二个：git stash show  stash@{1}  -p
+
+$ git stash drop stash@{$num} ：丢弃stash@{$num}存储，从列表中删除这个存储
+$ git stash clear ：删除所有缓存的stash
+
+$ git stash drop stash@{$num} ：丢弃stash@{$num}存储，从列表中删除这个存储
 ```
 
 
