@@ -6,9 +6,9 @@
 * [Commit History](#Commit_History)
 * [版本分支](#版本分支)
 * [标签](#标签)
-* [Update & Publish远程分支](#Update&Publish)
-* [Merge and Rebase](#Merge&Rebase)
-* [删除远程分支](#remove remote)
+* [Update & Publish远程分支](#Update_Publish)
+* [Merge and Rebase](#Merge_Rebase)
+* [删除远程分支](#删除远程分支)
 * [UNDO](#UNDO)
 * [stash](#stash)
 * [others](#others)
@@ -151,7 +151,7 @@ $ git push --tags
 
 
 
-## Update&Publish
+## Update_Publish
 
 ```
 $ ssh-keygen -t rsa -C "youremail@example.com"    #cat ~/.ssh/id_rsa.pub 上传公钥
@@ -181,7 +181,7 @@ git remote set-url origin  git@git.palmchat.corp:server/help-web.git
 
 
 
-### remove remote
+### 删除远程分支
 
 ```
 $ git push origin :<branchName>              #删除远程分支2
@@ -200,7 +200,7 @@ git branch -r -d origin/feature/daily-2021v5-4
 
 
 
-### Merge&Rebase
+### Merge_Rebase
 
 ```
 # merge <branch> into your current HEAD
