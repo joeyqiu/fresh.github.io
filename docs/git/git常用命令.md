@@ -175,6 +175,13 @@ $ git pull <remote> <branch>
 # publish local changes on a remote
 $ git push <remote> <branch>  
 
+# 本地分支推送到远程（一般会自动提示）
+$ git checkout -b temp 
+$ git push --set-upstream origin temp
+(fatal: The current branch temp has no upstream branch.
+To push the current branch and set the remote as upstream, use)
+
+    
 修改远程分支地址：
 git remote set-url origin  git@git.palmchat.corp:server/help-web.git
 ```

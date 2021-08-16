@@ -1,5 +1,15 @@
 ## meta: viewport
 
+viewport: 为viewport(视口)的初始大小提供指示(hint)，目前仅用于移动设备。
+
+参考链接：https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta/name
+
+| 值    | 可能的附加值                          | 描述                                                 |
+| ----- | ------------------------------------- | ---------------------------------------------------- |
+| width | 一个正整数，或者字符串 `device-width` | 定义 viewport 的宽度，如果值为正整数，则单位为像素。 |
+
+
+
 ### 禁止页面缩放
 
 在html标签中通过设置meta，可以禁止页面的缩放。
