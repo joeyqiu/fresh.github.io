@@ -12,8 +12,8 @@
 git remote add <name> <url>
 
 如
-git remote add official https://github.com/ant-design/ant-design.git
-// 一般默认的remote是origin，这个official是官方的远程
+git remote add antd-origin https://github.com/ant-design/ant-design.git
+// 一般默认的remote是origin，这个antd-origin是antd官方的远程
 ```
 
 
@@ -21,10 +21,10 @@ git remote add official https://github.com/ant-design/ant-design.git
 然后基于这个官方的远程仓库创建新的分支：
 
 ```
-git checkout -b latest official/master，基于官方的远程master分支，创建个本地的
+git checkout -b antd-master antd-origin/master，基于官方的远程master分支，创建个本地的
 ```
 
-latest分支是跟踪github上ant最新代码的分支。
+antd-master分支是跟踪github上ant最新代码的分支。
 
 
 
@@ -33,14 +33,15 @@ latest分支是跟踪github上ant最新代码的分支。
 ```
 远程remote为github。
 
-git checkout -b github github/master
-fatal: 'github/master' is not a commit and a branch 'github' cannot be created from it
+git checkout -b antd-master  antd-origin/master
+fatal: 'antd-origin/master' is not a commit and a branch 'antd-master' cannot be created from it
 ```
 
-就是因为版本的代码需要更新下，可以`git pull` , 或者`git fetch github` 来更新分支先。
+就是因为版本的代码需要更新下，可以`git pull` , 或者`git fetch antd-origin` 来更新分支先。
 
 
 
 如果需要merge新功能的时候，可以基于latest再切换一个新分支，然后会推到想要merge的版本，然后再merge到自己的分支上去。
 
 latest分支只做跟踪。
+
